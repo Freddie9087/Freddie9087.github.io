@@ -67,14 +67,14 @@ nav li {
     line-height: 45px;
 }
 
-nav h1 {
-    line-height: 80px;
-    margin-left: 150px;
-}
-
-nav i {
-    color: #adb5bd;
-    margin-right: 15px;
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid white 2px; */
+    width: 10%;
+    font-size: 1.4rem;
+    margin-left: 5%;
 }
 
 /* Header */
@@ -269,25 +269,22 @@ section {
 .card {
     position: relative;
     float: left;
-    width: 350px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     background-color: #f8f9fa;
     margin: 20px;
     /* border-left: #212529 solid 5px; */
     bottom: 100px;
     z-index: 2;
     text-align: center;
+    border-radius: 100px;
+    padding-top: 25px;
 }
 
 .card a {
     font-size: 5rem;
     color: #212529;
-}
-
-.card p {
-    margin-top: 40px;
-    font-size: 1.5rem;
-    color: #212529;
+    
 }
 
 /* Call to Action */
@@ -373,19 +370,8 @@ footer p {
         align-items: center;
     }
 
-    .logo {
-        font-size: 1.5rem;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    nav i {
-        margin: 0 auto;
-    }
-
-    nav a {
-        width: 50%;
-        text-align: center;
+    .logo_container {
+        margin: auto;
     }
 
     ul a {
@@ -401,7 +387,7 @@ footer p {
         position: relative;
         width: 100%;
         font-size: 1rem;
-        bottom: 160px;
+        bottom: 50px;
     }
 
     .hero_statement h1 {
@@ -438,6 +424,7 @@ footer p {
 
     .about_box  {
         width: 100%;
+        margin: 0;
     }
 
     .boxes {
@@ -458,15 +445,16 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         margin: 20px;
         bottom: 300px;
         border-radius: 100px;
+        padding-bottom: 25px;
     }
 
     .card a {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .projects {
@@ -507,7 +495,10 @@ footer p {
     form button {
         width: 80%;
         padding: 10px;
+        margin: auto 0;
         margin-left: 10%;
+        margin-top: 20px;
+
     }
 
     legend {
@@ -517,34 +508,22 @@ footer p {
 
 }
 
-@media screen and (max-width: 1024px) {
-    * {
-        width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .logo_container {
+        margin-right: 200px;
     }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .logo i {
-        margin-left: 100px;
-        line-height: 85px;
-        font-size: 1.5rem;
-    }
-
-    .logo h1 {
-        margin-left: 140px;
-        margin-top: -84px;
+    ul {
+        margin-left: 30px;
     }
 
     .links {
-        margin-right: 20px;
-        float: left;
-        width: 100px;
-        height: 50px;
+        margin-left: 20px;
+        margin-right: 0;
     }
+
+    
 
     header {
         width: 100%;
@@ -564,4 +543,14 @@ footer p {
         width: 100%;
     }
 
+    form button {
+        margin: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    form button {
+        margin: 20px;
+    }
 }

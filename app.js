@@ -9,31 +9,37 @@ function highLight() {
     var link1 = document.getElementById("link1");
     var link2 = document.getElementById("link2");
     var link3 = document.getElementById("link3");
+    var link4 = document.getElementById("link4");
     var scrollPos = window.scrollY;
 
-    if (scrollPos < 650) {
+    if (scrollPos < 650 ) {
         link1.classList.add("hover")
         link2.classList.remove("hover")
         link3.classList.remove("hover")
+        link4.classList.remove("hover")
         
     } 
     if (scrollPos > 650) {
         link2.classList.add("hover")
         link1.classList.remove("hover")
         link3.classList.remove("hover")
+        link4.classList.remove("hover")
         
     }
     if (scrollPos > 2200) {
         link3.classList.add("hover")
         link2.classList.remove("hover") 
         link1.classList.remove("hover") 
+        link4.classList.remove("hover") 
     }
 
-    if (scrollPos > 3000) {
+    if (scrollPos > 2840) {
         link3.classList.remove("hover")
+        link4.classList.add("hover")
+        
     }
 
-      console.log(scrollPos);
+    //   console.log(scrollPos);
 }
 
 function cardSlider() {
@@ -44,7 +50,7 @@ function cardSlider() {
 //  @ 1351 stop runing card/value code or idk
 
 
-    if (value < 2140) {
+    if (value < 2250 && innerWidth >= 1024) {
     card1.style.bottom = value - 10000 * 0.2 + "px";
     card2.style.bottom = value - 10000 * 0.2 + "px";
     card3.style.bottom = value - 10000 * 0.2 + "px";
